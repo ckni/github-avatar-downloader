@@ -1,8 +1,8 @@
 {
   "name": "github-avatar-downloader",
   "version": "1.0.0",
-  "description": "## Problem Statement",
-  "main": "index.js",
+  "description": "Download the avatars of all contributors of a specified github repository",
+  "main": "download_avatars.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,8 +11,8 @@
     "url": "git+https://github.com/kaichesterni/github-avatar-downloader.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Chester Ni",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/kaichesterni/github-avatar-downloader/issues"
   },
