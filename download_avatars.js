@@ -1,6 +1,7 @@
 /*jshint esversion: 6 */
 const request = require("request");
 const fs = require("fs");
+const dotenv = require("dotenv").config();
 console.log("Welcome to GitHub Avatar Downloader v1.0.0");
 
 // Gets all contributors of a repo
@@ -10,6 +11,9 @@ function getContributors(repoOwner, repoName, callback) {
     url: "https://api.github.com/repos/" + repoOwner + "/" + repoName + "/contributors",
     headers: {
       "User-Agent": "github-avatar-downloader"
+    },
+    qs: {
+      "access_token": process.env.GITHUB_AUTH_CODE
     }
   };
 
