@@ -1,7 +1,8 @@
 /*jshint esversion: 6 */
 const request = require("request");
 const fs = require("fs");
-const dotenv = require("dotenv").config();
+const dotenv = require("dotenv");
+const authCode = dotenv.parse(fs.readFileSync('.env')).GITHUB_AUTH_CODE;
 console.log("Welcome to GitHub Avatar Downloader v1.0.0");
 
 // Gets all contributors of a repo
@@ -13,7 +14,7 @@ function getContributors(repoOwner, repoName, callback) {
       "User-Agent": "github-avatar-downloader"
     },
     qs: {
-      "access_token": process.env.GITHUB_AUTH_CODE
+      "access_token": authCode
     }
   };
 
@@ -49,7 +50,11 @@ function downloadAvatars(body) {
 const repoOwner = process.argv[2];
 const repoName = process.argv[3];
 if (repoOwner && repoName) {
-  getContributors(repoOwner, repoName, downloadAvatars);
+  if (authCode) {
+    getContributors(repoOwner, repoName, downloadAvatars);
+  } else {
+    console.log("Missing authorization file. Please refer to https://github.com/kaichesterni/github-avatar-downloader#authorization");
+  }
 } else {
   console.log("Missing arguments. Syntax: node download_avatars.js <Repo Owner> <Repo Name>");
 }

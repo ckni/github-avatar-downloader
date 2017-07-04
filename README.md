@@ -12,7 +12,7 @@ Where `kaichesterni` is the owner of a repository and `github-avatar-downloader`
 
 ## Authorization
 
-Dotenv has been integrated into Github Avatar Downloader in order to authorize requests for contributor lists. Users should create a file called `auth.env` containing:
+Dotenv has been integrated into Github Avatar Downloader in order to authorize requests for contributor lists. Users should create a file called `.env` containing:
 
 `GITHUB_AUTH_CODE=abcdefg`
 
