@@ -1,11 +1,16 @@
 # GitHub Avatar Downloader
 
-## Problem Statement
+Given a GitHub repository name and owner, GitHub Avatar Downloader will download the avatars of all its contributors and save them to subdirectory `./avatars`
 
-Given a GitHub repository name and owner, download all the contributors' profile images and save them to a subdirectory, `avatars/`.
-
-## Expected Usage
+## Usage
 
 This program should be executed from the command line, in the following manner:
 
-`node download_avatars.js jquery jquery`
+`node download_avatars.js kaichesterni github-avatar-downloader`
+
+Where `kaichesterni` is the owner of a repository and `github-avatar-downloader` is the name of the repository
+
+## Dependencies
+
+* Node.js - https://nodejs.org
+* Request - https://github.com/request/request
