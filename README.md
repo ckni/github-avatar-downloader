@@ -2,6 +2,10 @@
 
 Given a GitHub repository name and owner, GitHub Avatar Downloader will download the avatars of all its contributors and save them to subdirectory `./avatars`
 
+## Warning
+
+This repository has been replaced by [dl_avatar](https://github.com/ckni/dl_avatar)
+
 ## Usage
 
 This program should be executed from the command line, in the following manner:
